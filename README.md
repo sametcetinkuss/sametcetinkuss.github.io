@@ -3,23 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samet | Cyber Security</title>
+<title>Samet Çetinkuş | Cyber Security</title>
 
 <style>
 body {
     margin: 0;
     font-family: 'Courier New', monospace;
-    background: black;
-    color: #00ffcc;
-    overflow-x: hidden;
-}
-
-/* MATRIX BACKGROUND */
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    background: #050505;
+    color: #eaeaea;
 }
 
 /* HERO */
@@ -31,19 +22,19 @@ canvas {
     align-items: center;
     text-align: center;
 
-    animation: fadeIn 2s ease-in;
+    background: radial-gradient(circle at center, #0a0a0a, #000);
 }
 
 .hero h1 {
-    font-size: 55px;
-    letter-spacing: 3px;
+    font-size: 50px;
+    color: #00ffcc;
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 750px;
     color: #aaa;
     margin-top: 20px;
-    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* BUTTON */
@@ -69,154 +60,107 @@ section {
 }
 
 h2 {
-    border-left: 4px solid #00ffcc;
-    padding-left: 10px;
-}
-
-/* CARDS */
-.card {
-    background: rgba(0,0,0,0.7);
-    border: 1px solid #00ffcc;
-    padding: 20px;
-    margin-top: 20px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.03);
-}
-
-/* ANIMATION */
-@keyframes fadeIn {
-    from {opacity:0; transform: translateY(20px);}
-    to {opacity:1; transform: translateY(0);}
-}
-
-/* GLITCH EFFECT */
-.glitch {
-    position: relative;
     color: #00ffcc;
+    margin-bottom: 20px;
 }
 
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
+/* CARD */
+.card {
+    background: #0a0a0a;
+    border: 1px solid #111;
+    padding: 25px;
+    margin-top: 20px;
+    border-left: 3px solid #00ffcc;
 }
 
-.glitch::before {
-    animation: glitchTop 1s infinite linear;
-    color: red;
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    border: 1px solid #00ffcc;
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 14px;
 }
 
-.glitch::after {
-    animation: glitchBottom 1s infinite linear;
-    color: blue;
-}
-
-@keyframes glitchTop {
-    0% {clip-path: inset(0 0 80% 0);}
-    50% {clip-path: inset(0 0 10% 0);}
-    100% {clip-path: inset(0 0 80% 0);}
-}
-
-@keyframes glitchBottom {
-    0% {clip-path: inset(80% 0 0 0);}
-    50% {clip-path: inset(10% 0 0 0);}
-    100% {clip-path: inset(80% 0 0 0);}
-}
-
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    color: #555;
+    color: #666;
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="matrix"></canvas>
-
 <div class="hero">
-    <h1 class="glitch" data-text="SAMET ÇETİNKUŞ">SAMET ÇETİNKUŞ</h1>
+    <h1>Samet Çetinkuş</h1>
     <p>
-        Yaklaşık 6 yıldır bilişim teknolojileri alanında aktif olarak projeler geliştiriyorum.
-        Siber güvenlik, yazılım geliştirme ve sistem analizi üzerine çalışıyorum.
-        Amacım sadece sistemi kullanmak değil, sistemi çözmek.
+        Siber güvenlik ve yazılım alanında uzmanlaşmış, disiplinli ve sonuç odaklı bir geliştirici.
+        Amacı yalnızca sistemleri kullanmak değil, onları analiz etmek ve daha güvenli hale getirmek.
     </p>
-    <a href="#hakkimda" class="btn">Devam Et</a>
+    <a href="#hakkimda" class="btn">Detaylara Gir</a>
 </div>
 
 <section id="hakkimda">
     <h2>Hakkımda</h2>
-    <p>
-        Siber güvenlik benim için bir meslek değil, bir refleks.
-        Açıkları görmek, sistemleri analiz etmek ve riskleri ortadan kaldırmak üzerine odaklanıyorum.
-        Disiplinli, kararlı ve sonuç odaklı çalışırım.
-    </p>
+
+    <div class="card">
+        <p>
+        👋 Merhaba, ben Samet Çetinkuş.<br><br>
+
+        Yaklaşık 6 yıldır bilişim teknolojileri alanında aktif olarak projeler geliştiriyor ve kendimi sürekli geliştirmeye odaklanıyorum.
+        Bu süreçte hem pratik deneyim hem de teorik bilgi birikimi kazanarak siber güvenlik ve yazılım alanında uzmanlaştım.<br><br>
+
+        Şu anda odağım; güvenli, ölçeklenebilir ve sürdürülebilir sistemler geliştirmek.
+        Sistemlerdeki zafiyetleri analiz etmek, potansiyel tehditleri tespit etmek ve bunlara karşı etkili çözümler üretmek üzerine çalışıyorum.<br><br>
+
+        Aynı zamanda <b>Nexora Siber Güvenlik ve Yazılım</b> firmasının kurucusu olarak,
+        teknik bilgi ve tecrübemi gerçek dünya projelerine dönüştürmeyi ve profesyonel çözümler sunmayı hedefliyorum.<br><br>
+
+        Siber güvenlik alanında offensive (saldırı) ve defensive (savunma) güvenlik tarafında aktif olarak çalışmalar yürütüyorum.<br><br>
+
+        🚀 Hedefim teknolojiyi sadece takip etmek değil, bir adım önünde olmaktır.
+        </p>
+    </div>
 </section>
 
 <section>
-    <h2>Projeler</h2>
+    <h2>Teknolojiler</h2>
+
+    <div class="skills">
+        <span>Python</span>
+        <span>C</span>
+        <span>C#</span>
+        <span>C++</span>
+        <span>JavaScript</span>
+        <span>PHP</span>
+    </div>
+</section>
+
+<section>
+    <h2>Yaklaşımım</h2>
 
     <div class="card">
-        <h3>Python Güvenlik Araçları</h3>
-        <p>Otomasyon, analiz ve güvenlik testleri için özel araçlar geliştiriyorum.</p>
+        <p>
+        Temiz, güvenli ve performans odaklı kod yazmak benim için bir standarttır.
+        Sürekli öğrenme, analiz etme ve gelişim sürecini hiçbir zaman durdurmam.
+        Her proje benim için yeni bir meydan okumadır.
+        </p>
     </div>
-
-    <div class="card">
-        <h3>Siber Güvenlik Laboratuvarı</h3>
-        <p>Gerçek dünya senaryoları üzerinden saldırı ve savunma çalışmaları yapıyorum.</p>
-    </div>
-
 </section>
 
 <section>
     <h2>İletişim</h2>
-    <p>Email: seninmailin@example.com</p>
+
+    <div class="card">
+        <p>Email: seninmailin@example.com</p>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 Samet</p>
+    <p>© 2026 Samet Çetinkuş</p>
 </footer>
-
-<script>
-// MATRIX EFFECT
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-const letters = "01";
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-
-const drops = [];
-for(let x = 0; x < columns; x++) drops[x] = 1;
-
-function draw(){
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
-
-    ctx.fillStyle = "#00ffcc";
-    ctx.font = fontSize + "px monospace";
-
-    for(let i=0; i<drops.length; i++){
-        const text = letters.charAt(Math.floor(Math.random()*letters.length));
-        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-
-        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
-            drops[i] = 0;
-
-        drops[i]++;
-    }
-}
-
-setInterval(draw, 33);
-</script>
 
 </body>
 </html>
