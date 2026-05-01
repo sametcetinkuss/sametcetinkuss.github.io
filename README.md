@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samet Çetinkuş | Cyber Security</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -15,97 +15,94 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #050505, #0d0d0d);
-    color: white;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
 }
 
 /* NAV */
 nav {
     position: fixed;
     width: 100%;
-    top: 0;
-    padding: 20px 40px;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+    background: rgba(2,6,23,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 nav h1 {
-    color: #00ffcc;
+    color: #38bdf8;
 }
 
 nav a {
-    margin-left: 20px;
-    color: #ccc;
+    margin-left: 25px;
     text-decoration: none;
-    transition: 0.3s;
+    color: #94a3b8;
+    font-size: 14px;
 }
 
 nav a:hover {
-    color: #00ffcc;
+    color: #38bdf8;
 }
 
 /* HERO */
 .hero {
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-content {
+    max-width: 700px;
 }
 
 .hero h2 {
-    font-size: 50px;
+    font-size: 52px;
+    font-weight: 700;
     line-height: 1.2;
 }
 
 .hero h2 span {
-    color: #00ffcc;
+    color: #38bdf8;
 }
 
 .hero p {
     margin-top: 20px;
-    max-width: 600px;
-    color: #aaa;
+    color: #94a3b8;
+    line-height: 1.7;
 }
 
+/* BUTTON */
 .btn {
     margin-top: 30px;
     display: inline-block;
-    padding: 12px 25px;
-    border: 1px solid #00ffcc;
-    color: #00ffcc;
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: #020617;
+    border-radius: 8px;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: 600;
 }
 
 .btn:hover {
-    background: #00ffcc;
-    color: black;
+    background: #0ea5e9;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
-    padding: 100px 10%;
+    padding: 100px 8%;
 }
 
-/* GLASS CARD */
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
     padding: 30px;
-    border-radius: 15px;
     margin-top: 20px;
-    transition: 0.4s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #00ffcc;
 }
 
 /* GRID */
@@ -118,29 +115,18 @@ section {
 /* SKILLS */
 .skills span {
     display: inline-block;
-    margin: 5px;
-    padding: 8px 15px;
-    border: 1px solid #00ffcc;
+    margin: 6px;
+    padding: 8px 14px;
+    background: rgba(56,189,248,0.1);
     border-radius: 20px;
+    font-size: 13px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 40px;
-    color: #666;
-}
-
-/* SCROLL ANIMATION */
-.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
+    color: #64748b;
 }
 </style>
 </head>
@@ -151,36 +137,38 @@ footer {
     <h1>Samet</h1>
     <div>
         <a href="#hakkimda">Hakkımda</a>
-        <a href="#skill">Yetenekler</a>
+        <a href="#yetenek">Yetenekler</a>
         <a href="#iletisim">İletişim</a>
     </div>
 </nav>
 
 <div class="hero">
-    <h2>Ben <span>Samet Çetinkuş</span><br>Cyber Security & Developer</h2>
-    <p>
-        6+ yıllık deneyimle siber güvenlik ve yazılım alanında aktif olarak çalışıyorum.
-        Sistemleri sadece kullanmam — analiz eder, kırar ve yeniden inşa ederim.
-    </p>
-    <a href="#hakkimda" class="btn">Keşfet</a>
+    <div class="hero-content">
+        <h2>Ben <span>Samet Çetinkuş</span><br>Siber Güvenlik Uzmanı & Yazılımcı</h2>
+        <p>
+            6+ yıllık deneyimle siber güvenlik ve yazılım alanında aktif olarak çalışıyorum.
+            Güvenli, ölçeklenebilir ve sürdürülebilir sistemler geliştiriyorum.
+        </p>
+        <a href="#hakkimda" class="btn">Daha Fazla</a>
+    </div>
 </div>
 
-<section id="hakkimda" class="hidden">
+<section id="hakkimda">
     <h2>Hakkımda</h2>
     <div class="card">
         👋 Merhaba, ben Samet Çetinkuş.<br><br>
 
-        Yaklaşık 6 yıldır bilişim teknolojileri alanında aktif olarak projeler geliştiriyor ve kendimi sürekli geliştirmeye odaklanıyorum.
-        Bu süreçte hem pratik deneyim hem de teorik bilgi birikimi kazanarak siber güvenlik ve yazılım alanında uzmanlaştım.<br><br>
+        Yaklaşık 6 yıldır bilişim teknolojileri alanında aktif olarak projeler geliştiriyorum.
+        Bu süreçte hem pratik hem teorik olarak kendimi geliştirerek siber güvenlik ve yazılım alanında uzmanlaştım.<br><br>
 
-        Güvenli, ölçeklenebilir ve sürdürülebilir sistemler geliştirmek üzerine çalışıyorum.
-        Zafiyet analizi, tehdit tespiti ve çözüm üretimi ana odak noktalarım.<br><br>
+        Sistemlerdeki zafiyetleri analiz etmek, tehditleri tespit etmek ve çözüm üretmek üzerine çalışıyorum.<br><br>
 
-        <b>Nexora</b> kurucusu olarak gerçek dünya problemlerine profesyonel çözümler geliştiriyorum.
+        Nexora Siber Güvenlik ve Yazılım firmasının kurucusu olarak,
+        teknik bilgi ve tecrübemi gerçek dünya projelerine dönüştürüyorum.
     </div>
 </section>
 
-<section id="skill" class="hidden">
+<section id="yetenek">
     <h2>Teknolojiler</h2>
 
     <div class="skills">
@@ -193,7 +181,7 @@ footer {
     </div>
 </section>
 
-<section class="hidden">
+<section>
     <h2>Uzmanlık Alanları</h2>
 
     <div class="grid">
@@ -204,7 +192,7 @@ footer {
     </div>
 </section>
 
-<section id="iletisim" class="hidden">
+<section id="iletisim">
     <h2>İletişim</h2>
     <div class="card">
         Email: seninmailin@example.com
@@ -214,21 +202,6 @@ footer {
 <footer>
     © 2026 Samet Çetinkuş
 </footer>
-
-<script>
-// SCROLL ANIMATION
-const hiddenElements = document.querySelectorAll('.hidden');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
-});
-
-hiddenElements.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
