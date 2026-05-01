@@ -1,0 +1,1 @@
+# sametcetinkuss.github.io
