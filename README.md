@@ -5,12 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samet Çetinkuş | Cyber Security</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-body {
+* {
     margin: 0;
-    font-family: 'Courier New', monospace;
-    background: #050505;
-    color: #eaeaea;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #050505, #0d0d0d);
+    color: white;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h1 {
+    color: #00ffcc;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffcc;
 }
 
 /* HERO */
@@ -19,27 +54,27 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    background: radial-gradient(circle at center, #0a0a0a, #000);
+    padding: 0 10%;
 }
 
-.hero h1 {
+.hero h2 {
     font-size: 50px;
+    line-height: 1.2;
+}
+
+.hero h2 span {
     color: #00ffcc;
 }
 
 .hero p {
-    max-width: 750px;
-    color: #aaa;
     margin-top: 20px;
-    line-height: 1.6;
+    max-width: 600px;
+    color: #aaa;
 }
 
-/* BUTTON */
 .btn {
-    margin-top: 25px;
+    margin-top: 30px;
+    display: inline-block;
     padding: 12px 25px;
     border: 1px solid #00ffcc;
     color: #00ffcc;
@@ -54,78 +89,98 @@ body {
 
 /* SECTIONS */
 section {
-    padding: 80px 20px;
-    max-width: 900px;
-    margin: auto;
+    padding: 100px 10%;
 }
 
-h2 {
-    color: #00ffcc;
-    margin-bottom: 20px;
-}
-
-/* CARD */
+/* GLASS CARD */
 .card {
-    background: #0a0a0a;
-    border: 1px solid #111;
-    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
     margin-top: 20px;
-    border-left: 3px solid #00ffcc;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffcc;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
 }
 
 /* SKILLS */
 .skills span {
     display: inline-block;
-    border: 1px solid #00ffcc;
-    padding: 8px 12px;
     margin: 5px;
-    font-size: 14px;
+    padding: 8px 15px;
+    border: 1px solid #00ffcc;
+    border-radius: 20px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     color: #666;
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <h1>Samet</h1>
+    <div>
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#skill">Yetenekler</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
+</nav>
+
 <div class="hero">
-    <h1>Samet Çetinkuş</h1>
+    <h2>Ben <span>Samet Çetinkuş</span><br>Cyber Security & Developer</h2>
     <p>
-        Siber güvenlik ve yazılım alanında uzmanlaşmış, disiplinli ve sonuç odaklı bir geliştirici.
-        Amacı yalnızca sistemleri kullanmak değil, onları analiz etmek ve daha güvenli hale getirmek.
+        6+ yıllık deneyimle siber güvenlik ve yazılım alanında aktif olarak çalışıyorum.
+        Sistemleri sadece kullanmam — analiz eder, kırar ve yeniden inşa ederim.
     </p>
-    <a href="#hakkimda" class="btn">Detaylara Gir</a>
+    <a href="#hakkimda" class="btn">Keşfet</a>
 </div>
 
-<section id="hakkimda">
+<section id="hakkimda" class="hidden">
     <h2>Hakkımda</h2>
-
     <div class="card">
-        <p>
         👋 Merhaba, ben Samet Çetinkuş.<br><br>
 
         Yaklaşık 6 yıldır bilişim teknolojileri alanında aktif olarak projeler geliştiriyor ve kendimi sürekli geliştirmeye odaklanıyorum.
         Bu süreçte hem pratik deneyim hem de teorik bilgi birikimi kazanarak siber güvenlik ve yazılım alanında uzmanlaştım.<br><br>
 
-        Şu anda odağım; güvenli, ölçeklenebilir ve sürdürülebilir sistemler geliştirmek.
-        Sistemlerdeki zafiyetleri analiz etmek, potansiyel tehditleri tespit etmek ve bunlara karşı etkili çözümler üretmek üzerine çalışıyorum.<br><br>
+        Güvenli, ölçeklenebilir ve sürdürülebilir sistemler geliştirmek üzerine çalışıyorum.
+        Zafiyet analizi, tehdit tespiti ve çözüm üretimi ana odak noktalarım.<br><br>
 
-        Aynı zamanda <b>Nexora Siber Güvenlik ve Yazılım</b> firmasının kurucusu olarak,
-        teknik bilgi ve tecrübemi gerçek dünya projelerine dönüştürmeyi ve profesyonel çözümler sunmayı hedefliyorum.<br><br>
-
-        Siber güvenlik alanında offensive (saldırı) ve defensive (savunma) güvenlik tarafında aktif olarak çalışmalar yürütüyorum.<br><br>
-
-        🚀 Hedefim teknolojiyi sadece takip etmek değil, bir adım önünde olmaktır.
-        </p>
+        <b>Nexora</b> kurucusu olarak gerçek dünya problemlerine profesyonel çözümler geliştiriyorum.
     </div>
 </section>
 
-<section>
+<section id="skill" class="hidden">
     <h2>Teknolojiler</h2>
 
     <div class="skills">
@@ -138,29 +193,42 @@ footer {
     </div>
 </section>
 
-<section>
-    <h2>Yaklaşımım</h2>
+<section class="hidden">
+    <h2>Uzmanlık Alanları</h2>
 
-    <div class="card">
-        <p>
-        Temiz, güvenli ve performans odaklı kod yazmak benim için bir standarttır.
-        Sürekli öğrenme, analiz etme ve gelişim sürecini hiçbir zaman durdurmam.
-        Her proje benim için yeni bir meydan okumadır.
-        </p>
+    <div class="grid">
+        <div class="card">Penetration Testing</div>
+        <div class="card">Web Security</div>
+        <div class="card">Network Security</div>
+        <div class="card">Secure Coding</div>
     </div>
 </section>
 
-<section>
+<section id="iletisim" class="hidden">
     <h2>İletişim</h2>
-
     <div class="card">
-        <p>Email: seninmailin@example.com</p>
+        Email: seninmailin@example.com
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Samet Çetinkuş</p>
+    © 2026 Samet Çetinkuş
 </footer>
+
+<script>
+// SCROLL ANIMATION
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+hiddenElements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
